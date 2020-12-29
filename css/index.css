@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {font-family: 'Lato', sans-serif; font-size: 16px;}
+a {color: inherit; text-decoration: none;}
+ul {list-style: none;}
+.container {max-width: 800px; margin: auto;}
+h2.title {font-size: 1.8em; font-weight: 100; letter-spacing: 4px;}
+h3.title { color: #888; font-style: italic;}
+.w-100 {width: 100%;}
+
+
+header {display: flex; justify-content: space-between; height: 3em; width: 100%; background-color: #000;}
+header nav {display: flex;}
+header nav ul.gnb {display: flex; color: #fff;}
+header nav ul.gnb >li{padding: 1em 1.5em; text-align: center; position: relative; }
+header nav ul.gnb >li:hover {background-color: #ccc; color: #222; }
+header nav ul.gnb >li >ul.sub{ z-index: 2; background-color: #fff; color: #000; position: absolute; top: 3em; left: 0;}
+header nav ul.gnb >li >ul.sub>li{display: none; font-size: 1em; padding: .7em 3.5em 1em .7em; text-align: left; }
+header nav ul.gnb >li:last-child:hover >ul.sub>li {display: block;}
+header nav ul.gnb >li >ul.sub>li:hover {background-color: #ccc; }
+header nav ul.gnb >li > a> i {margin-left: .5em;}
+header .search {font-size: 1.2em; color: #fff; padding: .8em; cursor: pointer;}
+
+.slide{ width: 100%;  }
+.slide ul {width: 100%; }
+.slide ul li {width: 100%; }
+.slide ul li .txt-wrap{position: absolute; left: 50%; bottom: 1%; color: #fff; text-align: center; transform: translate(-50%,-50%);}
+.slide ul li .txt-wrap h3 {font-size: 1.5em;}
+.slide ul li .txt-wrap p {margin: 1.5em 0 1em 0; font-weight: bold; font-size: .9em;}
+
+.theband-wrapper {width: 100%; height: 100vh; display: flex; }
+.theband-wrapper .title-wrap{text-align: center; }
+.theband-wrapper h2.title{padding: .5em 0 .7em 0;  }
+.theband-wrapper p{padding: 1.5em 0; line-height: 1.5;}
+.theband-wrapper .img-wrap {text-align: center;}
+.theband-wrapper .img-wrap ul {  display: flex; justify-content: center; align-items: center;}
+.theband-wrapper .img-wrap ul li {flex: 33.3333% 0 0; }
+.theband-wrapper .img-wrap ul li img{width: 150px; height: auto;}
+
+.tourdate-wrapper { text-align: center; width: 100%; background-color: #000; }
+.tourdate-wrapper h2.title {padding: 2.5em 0 .7em 0; color: #fff;}
+
+.tourdate-wrapper .date-wrap {margin: 0 auto; margin-top: 2.5em; text-align: left;}
+.tourdate-wrapper .date-wrap > div{color: #666; background: #fff; width: 95%; position: relative; padding: 0.7em; margin: 0 auto; border-bottom: 1px solid #ccc; }
+.tourdate-wrapper .date-wrap > div:not(:last-child)::after {content: "Sold out"; padding: .2em; line-height: 1; color: #fff; display: inline-block; background-color: rgb(212, 44, 44); margin-left: .7em;}
+.tourdate-wrapper .date-wrap > div:last-child::after {content: "3"; padding: .4em .5em; background-color: #000; position: absolute; right: 2%; color: #fff; font-style: 2em;  border-radius: 50%; top: 15%;}
+
+.tourdate-wrapper .city-wrapper {width: 95%;  align-items: center; margin: auto;}
+.tourdate-wrapper .city-wrap {flex: 33.3333% 0 0; display: flex;  justify-content: space-between; }
+.tourdate-wrapper .city-wrap .city { width: 31%; margin-bottom: 5em;}
+.tourdate-wrapper .city-wrap .img-wrap img {transition: all .7s;}
+.tourdate-wrapper .city-wrap .img-wrap { padding-top: 2em;}
+.tourdate-wrapper .city-wrap .img-wrap img:hover {opacity: .7;}
+.tourdate-wrapper .city-wrap .content {text-align: left; background-color: #fff; width: 100%;}
+.tourdate-wrapper .city-wrap h1 {padding: 1em; color: #000; font-weight: bold; }
+.tourdate-wrapper .city-wrap h4 {padding: .2em 0 1em 1em; color: #666; }
+.tourdate-wrapper .city-wrap p {padding: .2em 0 1em 1em; line-height: 1.2;}
+.tourdate-wrapper .city-wrap button {margin: .2em 0 1em 1em; padding: .8em; border: 0; background-color: #000; color: #fff; letter-spacing: 1px; font-size: .9em;}
+.tourdate-wrapper .city-wrap button:hover {background-color: #ccc; color: #000;}
+
+.contact-wrapper {width: 100%; background-color: #fff; text-align: center;}
+.contact-wrapper h2.title {padding: 2.5em 0 .7em 0;}
+.contact-wrapper .contact-wrap {display: flex; justify-content: space-between; padding-top: 3em;}
+
+.contact-wrapper .contact-wrap .icon-wrap > div {text-align: left; padding: .3em;}
+.contact-wrapper .contact-wrap .icon-wrap > div i {display: inline-block; font-size: 1.1em; padding-right: .5em;}
+.contact-wrapper .contact-wrap .icon-wrap > div p {display: inline-block;font-size: 1.2em;}
+
+.contact-wrapper .contact-wrap .send-wrap input { color: #ccc; margin: .5em 0 .5em .5em;}
+
+.contact-wrapper .contact-wrap .send-wrap input.name {padding: .5em 0 .5em  .1em; }
+.contact-wrapper .contact-wrap .send-wrap input.email {padding: .5em 0 .5em  .1em; }
+.contact-wrapper .contact-wrap .send-wrap input.message {padding: .5em 13.2em .5em .1em; }
+.contact-wrapper .contact-wrap .send-wrap button {display: block; margin-left: auto; padding: .8em; border: 0; background-color: #000; color: #fff; letter-spacing: 1px; font-size: .9em; margin-bottom: 7em;}
+.contact-wrapper .contact-wrap .send-wrap button:hover {background-color: #ccc; color: #000;}
+
+footer {text-align: center; width: 100%; }
+footer .sns{text-align: center; padding: 3em 0 1em 0; font-size: 1.3em;}
+footer .sns i{color: #666;}
+footer .sns i:hover{color: #ccc;}
+footer p {color: #ccc; margin-bottom: 5em;}
+footer p a {border-bottom: 1px solid #666;}
