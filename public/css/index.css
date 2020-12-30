@@ -9,7 +9,7 @@ h3.title { color: #888; font-style: italic;}
 .w-100 {width: 100%;}
 
 
-header {display: flex; justify-content: space-between; height: 3em; width: 100%; background-color: #000;}
+header {position: fixed; z-index: 100; display: flex; justify-content: space-between; height: 3em; width: 100%; background-color: #000;}
 header nav {display: flex;}
 header nav ul.gnb {display: flex; color: #fff;}
 header nav ul.gnb >li{padding: 1em 1.5em; text-align: center; position: relative;}
