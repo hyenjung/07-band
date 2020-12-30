@@ -12,7 +12,7 @@ h3.title { color: #888; font-style: italic;}
 header {display: flex; justify-content: space-between; height: 3em; width: 100%; background-color: #000;}
 header nav {display: flex;}
 header nav ul.gnb {display: flex; color: #fff;}
-header nav ul.gnb >li{padding: 1em 1.5em; text-align: center; position: relative; }
+header nav ul.gnb >li{padding: 1em 1.5em; text-align: center; position: relative;}
 header nav ul.gnb >li:nth-child(5) {display: none;}
 header nav ul.gnb >li:hover {background-color: #ccc; color: #222; }
 header nav ul.gnb >li >ul.sub{ z-index: 2; background-color: #fff; color: #000; position: absolute; top: 3em; left: 0;}
@@ -97,4 +97,24 @@ header nav ul.gnb { display: block; width: 100%;}
 header nav ul.gnb >li:first-child {display: block; width: 20%; z-index: 10; text-align: left; }
 header nav ul.gnb >li:not(:first-child) { z-index: 10; display: none; width: 100%; text-align: left; background-color: #000;}
 header nav ul.gnb >li:hover {background-color: #ccc; color: #222;}
-}
+
+
+.theband-wrapper .img-wrap ul {width: 100%; display: block; justify-content: center; align-items: center;}
+.theband-wrapper .img-wrap ul li:not(:last-child) { padding:0;}
+.theband-wrapper .img-wrap ul li img{width: auto;}
+
+.tourdate-wrapper {width: 100%; }
+.tourdate-wrapper .city-wrapper {width: 100%; text-align: center;}
+.tourdate-wrapper .city-wrap {padding: .9em; display: block; text-align: center; justify-content: center;}
+.tourdate-wrapper .city-wrap .city {width: 100%; display: block; margin: 0;}
+.tourdate-wrapper .city-wrap .city:last-child {margin-bottom: 6em;}
+
+
+
+.contact-wrapper .contact-wrap {display: block; padding: 3em 1em; }
+
+
+.contact-wrapper .contact-wrap .send-wrap input.name,
+.contact-wrapper .contact-wrap .send-wrap input.email,
+.contact-wrapper .contact-wrap .send-wrap input.message {padding: .5em 15em .5em .1em; margin: .5em auto; }
+
