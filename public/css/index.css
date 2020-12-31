@@ -4,24 +4,29 @@ body {font-family: 'Lato', sans-serif; font-size: 16px;}
 a {color: inherit; text-decoration: none;}
 ul {list-style: none;}
 .container {max-width: 800px; margin: auto;}
-h2.title {font-size: 1.8em; font-weight: 100; letter-spacing: 4px;}
-h3.title { color: #888; font-style: italic;}
+h2.title {font-size: 1.8em; font-weight: 100; letter-spacing: 4px; text-align: center;}
+h3.title { color: #888; font-style: italic; text-align: center; }
 .w-100 {width: 100%;}
 
 
-header {position: fixed; z-index: 100; display: flex; justify-content: space-between; height: 3em; width: 100%; background-color: #000;}
-header nav {display: flex;}
-header nav ul.gnb {display: flex; color: #fff;}
-header nav ul.gnb >li{padding: 1em 1.5em; text-align: center; position: relative;}
-header nav ul.gnb >li:nth-child(5) {display: none;}
-header nav ul.gnb >li:hover {background-color: #ccc; color: #222; }
-header nav ul.gnb >li >ul.sub{ z-index: 2; background-color: #fff; color: #000; position: absolute; top: 3em; left: 0;}
-header nav ul.gnb >li >ul.sub>li{ font-size: 1em; padding: .7em 3.5em 1em .7em; text-align: left; display: none; }
-header nav ul.gnb >li:last-child:hover >ul.sub {display: block;}
-header nav ul.gnb >li >ul.sub>li:hover {background-color: #ccc; }
-header nav ul.gnb >li > a> i {margin-left: .5em;}
-header .search i {font-size: 1.2em; color: #fff; padding: .75em; cursor: pointer; position: absolute; right: 0; top: 0;}
-header .search i.last { cursor: pointer; display: none;}
+.header-wrapper {background-color: #111; position: fixed; left: 0; top: 0; width: 100%; box-shadow: 0 0 0.5em rgba(0,0,0,0.7); z-index: 99; color: #f9f9f9;display: flex; justify-content: space-between;}
+.header-wrapper .navi-wrapper {display: flex;}
+.header-wrapper .navi-wrapper .navi {padding: 1em 1.5em;}
+.header-wrapper .navi-wrapper .navi:hover {background-color: #ccc; color: #111;}
+.header-wrapper .navi-wrapper .navi.more {position: relative;}
+.header-wrapper .navi-wrapper .navi.more:hover .more-wrap {display: block;}
+.header-wrapper .navi-wrapper .more-wrap {position: absolute; top: 3em; left: 0; background-color: #f1f1f1; color: #111; display: none;}
+.header-wrapper .navi-wrapper .more-wrap > li {padding: 0.75em; padding-right: 4em;}
+.header-wrapper .navi-wrapper .more-wrap > li:hover {background-color: #bbb;}
+.header-wrapper .search-wrapper {}
+.header-wrapper .search-wrapper .search-wrap {padding: 1em;}
+.header-wrapper .search-wrapper .search-wrap:hover {background-color: #f44336;}
+.header-wrapper .search-wrapper .bar-wrap {padding: 1em; display: none;}
+.header-wrapper .search-wrapper .bar-wrap:hover {background-color: #bbb; color: #111;}
+.header-wrapper .mo-navi-wrapper {position: absolute; top: 3em; left: 0; width: 100%; background-color: inherit; display: none;}
+.header-wrapper .mo-navi-wrapper.active {display: none;}
+.header-wrapper .mo-navi-wrapper .mo-navi {padding: 1em 1.5em;}
+.header-wrapper .mo-navi-wrapper .mo-navi:hover {color: #f9f9f9; background-color: #bbb;}
 
 .slide{ width: 100%; }
 .slide ul {width: 100%; }
@@ -31,13 +36,13 @@ header .search i.last { cursor: pointer; display: none;}
 .slide ul li .txt-wrap p {margin: 1.5em 0 1em 0; font-weight: bold; font-size: .9em;}
 
 .theband-wrapper {width: 100%; display: flex; }
-.theband-wrapper .title-wrap{text-align: center; }
+.theband-wrapper .title-wrap{}
 .theband-wrapper h2.title{padding: 3em 0 .5em 0;  }
-.theband-wrapper p{padding: 1.5em 0; line-height: 1.5;}
-.theband-wrapper .img-wrap {text-align: center;}
+.theband-wrapper .title-wrap p{max-width: 767px; text-align: justify; margin: auto; padding: 1.5em 0; line-height: 1.5;}
+.theband-wrapper .img-wrap {text-align: center; }
 .theband-wrapper .img-wrap ul {  display: flex; justify-content: center; align-items: center;}
 .theband-wrapper .img-wrap ul li {flex: 33.3333% 0 0; padding-bottom: 5em;}
-.theband-wrapper .img-wrap ul li img{width: 150px; height: auto;}
+.theband-wrapper .img-wrap ul li img{margin-top: 1em; width: 150px; height: auto;}
 
 .tourdate-wrapper { text-align: center; width: 100%; background-color: #000; }
 .tourdate-wrapper h2.title {padding: 2.5em 0 .7em 0; color: #fff;}
@@ -76,6 +81,7 @@ header .search i.last { cursor: pointer; display: none;}
 .contact-wrapper .contact-wrap .send-wrap button {display: block; margin-left: auto; padding: .8em; border: 0; background-color: #000; color: #fff; letter-spacing: 1px; font-size: .9em; margin-bottom: 7em;}
 .contact-wrapper .contact-wrap .send-wrap button:hover {background-color: #ccc; color: #000;}
 
+
 footer {text-align: center; width: 100%; }
 footer .sns{text-align: center; padding: 3em 0 1em 0; font-size: 1.3em;}
 footer .sns i{color: #666;}
@@ -85,18 +91,10 @@ footer p a {border-bottom: 1px solid #666;}
 
 /***************** 반응형 *******************/
 @media screen and (max-width: 600px) {
-header nav ul.gnb >li:last-child,
-header nav ul.sub,
-header .search i:first-child {display: none;}
-header .search i.last {display: block; z-index: 20; }
-header .search:hover i {background-color: #ccc; color: #222;}
-
-header nav ul.gnb >li:nth-last-child(2) {display: block;}
-header nav {display: block; width: 100%;}
-header nav ul.gnb { display: block; width: 100%;}
-header nav ul.gnb >li:first-child {display: block; width: 20%; z-index: 10; text-align: left; }
-header nav ul.gnb >li:not(:first-child) { z-index: 10; display: none; width: 100%; text-align: left; background-color: #000;}
-header nav ul.gnb >li:hover {background-color: #ccc; color: #222;}
+.header-wrapper .search-wrapper .search-wrap {display: none;}
+.header-wrapper .search-wrapper .bar-wrap {display: block;}
+.header-wrapper .navi-wrapper .navi:not(:first-child) {display: none;}
+.header-wrapper .mo-navi-wrapper.active {display: block;}
 
 
 .theband-wrapper .img-wrap ul {width: 100%; display: block; justify-content: center; align-items: center;}
@@ -118,3 +116,4 @@ header nav ul.gnb >li:hover {background-color: #ccc; color: #222;}
 .contact-wrapper .contact-wrap .send-wrap input.email,
 .contact-wrapper .contact-wrap .send-wrap input.message {padding: .5em 15em .5em .1em; margin: .5em auto; }
 
+}
